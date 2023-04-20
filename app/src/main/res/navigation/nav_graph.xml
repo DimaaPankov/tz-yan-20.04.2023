@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/blackFragment">
+
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.gamezzz.screen.gameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_gameFragment_to_vinFragment"
+            app:destination="@id/vinFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loudingFragment"
+        android:name="com.gamezzz.screen.LoudingFragment"
+        android:label="fragment_louding"
+        tools:layout="@layout/fragment_louding" >
+        <action
+            android:id="@+id/action_loudingFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vinFragment"
+        android:name="com.gamezzz.screen.VinFragment"
+        android:label="fragment_vin"
+        tools:layout="@layout/fragment_vin" >
+        <action
+            android:id="@+id/action_vinFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/blackFragment"
+        android:name="com.gamezzz.screen.BlackFragment"
+        android:label="BlackFragment" >
+        <action
+            android:id="@+id/action_blackFragment_to_loudingFragment"
+            app:destination="@id/loudingFragment" />
+    </fragment>
+</navigation>
